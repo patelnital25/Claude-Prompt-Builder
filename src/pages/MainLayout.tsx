@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react'
 import { NavBar } from '../components/layout/NavBar'
 import { Sidebar } from '../components/layout/Sidebar'
+import { IconSidebar } from '../components/layout/IconSidebar'
 import { PromptWorkspace } from './PromptWorkspace'
 import { EmptyState } from './EmptyState'
 import { DeleteModal } from '../components/modals/DeleteModal'
@@ -92,11 +93,14 @@ export function MainLayout() {
     }
   }
 
+  // 56px IconSidebar + 56px (collapsed) or 256px (expanded) Prompt Library sidebar
+  const ICON_SIDEBAR_W = 56
   const sidebarWidth = sidebarCollapsed ? 56 : 256
 
   return (
     <div className="h-screen bg-background overflow-hidden flex flex-col">
       <NavBar onSearch={globalSearch} onSelectPrompt={handleSelectPrompt} />
+      <IconSidebar activeView="prompt-builder" />
 
       <div className="flex flex-1 pt-14 min-h-0">
         <Sidebar
@@ -112,7 +116,7 @@ export function MainLayout() {
 
         <main
           className="flex-1 min-h-0 overflow-hidden transition-all duration-300"
-          style={{ marginLeft: sidebarWidth }}
+          style={{ marginLeft: ICON_SIDEBAR_W + sidebarWidth }}
         >
           {selectedPrompt ? (
             <PromptWorkspace

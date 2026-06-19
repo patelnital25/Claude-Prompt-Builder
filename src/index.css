@@ -4,26 +4,35 @@
 
 @layer base {
   :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 263.4 70% 50.4%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 263.4 70% 50.4%;
-    --radius: 0.5rem;
+    /* NICE light-blue color scheme */
+    --background: 210 35% 95%;          /* #EBF2F7 – light blue-gray page bg */
+    --foreground: 213 50% 14%;          /* #112030 – dark navy text */
+
+    --card: 0 0% 100%;                   /* white cards */
+    --card-foreground: 213 50% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 50% 14%;
+
+    --primary: 200 100% 30%;            /* #006699 – NICE brand blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 207 50% 88%;           /* #CAE0ED – light blue */
+    --secondary-foreground: 213 50% 14%;
+
+    --muted: 207 40% 91%;               /* #D4E5EF */
+    --muted-foreground: 213 25% 42%;    /* #506478 – medium slate */
+
+    --accent: 207 45% 86%;              /* #C0DAEA */
+    --accent-foreground: 213 50% 14%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 207 30% 82%;              /* #C0D5E2 – visible but soft border */
+    --input: 207 35% 88%;               /* #C7DCEA */
+    --ring: 200 100% 30%;               /* #006699 */
+    --radius: 0.375rem;
   }
 }
 
@@ -37,7 +46,7 @@
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar – NICE-blue tinted */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -46,9 +55,9 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(217.2 32.6% 30%);
+  background: hsl(207 30% 72%);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(217.2 32.6% 40%);
+  background: hsl(200 60% 50%);
 }

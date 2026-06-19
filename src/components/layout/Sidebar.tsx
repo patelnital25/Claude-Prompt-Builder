@@ -47,14 +47,16 @@ export function Sidebar({
   return (
     <aside
       className={cn(
-        'fixed left-0 top-14 bottom-0 z-30 flex flex-col bg-card border-r border-border transition-all duration-300',
+        'fixed left-14 top-14 bottom-0 z-30 flex flex-col bg-white transition-all duration-300',
         collapsed ? 'w-14' : 'w-64'
       )}
+      style={{ borderRight: '1px solid #C8DCE8' }}
     >
       {/* Collapse Toggle */}
       <button
         onClick={() => onCollapse(!collapsed)}
-        className="absolute -right-3 top-6 h-6 w-6 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-accent transition-colors z-10 shadow-sm"
+        className="absolute -right-3 top-6 h-6 w-6 rounded-full bg-white border flex items-center justify-center transition-colors z-10 shadow-sm hover:bg-blue-50"
+      style={{ borderColor: '#C8DCE8', color: '#5B9DB8' }}
         aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
       >
         {collapsed ? <ChevronRight className="h-3 w-3" /> : <ChevronLeft className="h-3 w-3" />}

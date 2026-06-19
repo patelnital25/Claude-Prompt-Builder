@@ -9,9 +9,9 @@ interface ToastProps {
 
 export function Toast({ toast, onRemove }: ToastProps) {
   const icons = {
-    default: <Info className="h-4 w-4 text-blue-400" />,
-    success: <CheckCircle className="h-4 w-4 text-green-400" />,
-    destructive: <AlertCircle className="h-4 w-4 text-red-400" />,
+    default: <Info className="h-4 w-4 text-blue-600" />,
+    success: <CheckCircle className="h-4 w-4 text-green-600" />,
+    destructive: <AlertCircle className="h-4 w-4 text-red-600" />,
   }
 
   return (

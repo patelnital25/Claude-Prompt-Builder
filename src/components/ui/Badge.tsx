@@ -15,7 +15,7 @@ export function Badge({ className, variant = 'default', ...props }: BadgeProps) 
           'secondary': 'border-transparent bg-secondary text-secondary-foreground',
           'destructive': 'border-transparent bg-destructive text-destructive-foreground',
           'outline': 'text-foreground border-border',
-          'success': 'border-transparent bg-green-500/20 text-green-400',
+          'success': 'border-transparent bg-green-100 text-green-700',
         }[variant],
         className
       )}

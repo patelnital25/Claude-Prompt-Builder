@@ -94,7 +94,7 @@ export function PromptEditor({ prompt, onSave, onDirtyChange }: PromptEditorProp
           <Input
             value={name}
             onChange={e => setName(e.target.value)}
-            className="text-base font-medium border-slate-600 bg-secondary/40 focus-visible:border-primary/60 focus-visible:ring-primary/30"
+            className="text-base font-medium border-[#B8D0E0] bg-white focus-visible:border-primary/60 focus-visible:ring-primary/30"
           />
         </FieldGroup>
 
@@ -105,7 +105,7 @@ export function PromptEditor({ prompt, onSave, onDirtyChange }: PromptEditorProp
             onChange={e => setDescription(e.target.value)}
             rows={2}
             placeholder="Describe what this prompt does..."
-            className="border-slate-600 bg-secondary/40 focus-visible:border-primary/60 focus-visible:ring-primary/30"
+            className="border-[#B8D0E0] bg-white focus-visible:border-primary/60 focus-visible:ring-primary/30"
           />
         </FieldGroup>
 
@@ -115,7 +115,7 @@ export function PromptEditor({ prompt, onSave, onDirtyChange }: PromptEditorProp
             <select
               value={category}
               onChange={e => setCategory(e.target.value)}
-              className="flex h-10 w-full rounded-md border border-slate-600 bg-secondary/40 px-3 py-2 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:border-primary/60 transition-colors"
+              className="flex h-10 w-full rounded-md border border-[#B8D0E0] bg-white px-3 py-2 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:border-primary/60 transition-colors"
             >
               {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
             </select>
@@ -127,7 +127,7 @@ export function PromptEditor({ prompt, onSave, onDirtyChange }: PromptEditorProp
               value={tagInput}
               onChange={e => setTagInput(e.target.value)}
               onKeyDown={handleAddTag}
-              className="border-slate-600 bg-secondary/40 focus-visible:border-primary/60 focus-visible:ring-primary/30"
+              className="border-[#B8D0E0] bg-white focus-visible:border-primary/60 focus-visible:ring-primary/30"
             />
           </FieldGroup>
         </div>
@@ -155,12 +155,12 @@ export function PromptEditor({ prompt, onSave, onDirtyChange }: PromptEditorProp
           hint={`${content.length} characters`}
           hintRight
         >
-          <div className="rounded-md border border-slate-600 overflow-hidden focus-within:ring-2 focus-within:ring-primary/30 focus-within:border-primary/60 transition-all">
+          <div className="rounded-md border border-[#B8D0E0] overflow-hidden focus-within:ring-2 focus-within:ring-primary/30 focus-within:border-primary/60 transition-all">
             <Textarea
               value={content}
               onChange={e => setContent(e.target.value)}
               rows={18}
-              className="font-mono text-sm leading-relaxed resize-y border-0 rounded-none bg-secondary/30 focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="font-mono text-sm leading-relaxed resize-y border-0 rounded-none bg-white focus-visible:ring-0 focus-visible:ring-offset-0"
               placeholder="Enter your prompt content. Use {{variable}} for template variables..."
             />
           </div>
@@ -210,7 +210,7 @@ function FieldGroup({
   return (
     <div>
       <div className={`flex items-center mb-1.5 ${hintRight ? 'justify-between' : 'gap-2'}`}>
-        <label className="text-xs font-semibold uppercase tracking-wide text-slate-300">
+        <label className="text-xs font-semibold uppercase tracking-wide text-[#2D6A8A]">
           {label}
         </label>
         {hint && (
